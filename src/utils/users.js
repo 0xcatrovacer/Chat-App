@@ -2,7 +2,7 @@ const users = []
 
 //addUser
 
-const addUser = ( { id, nickname, room } ) => {
+const addUser = ({ id, nickname, room }) => {
     //cleandata
     nickname = nickname.trim().toLowerCase()
     room = room.trim().toLowerCase()
@@ -10,7 +10,7 @@ const addUser = ( { id, nickname, room } ) => {
     //Validate Input
     if (!nickname || !room) {
         return {
-            error: 'Username and room are required'
+            error: 'nickname and room are required'
         }
     }
 
@@ -29,18 +29,38 @@ const addUser = ( { id, nickname, room } ) => {
     //store user
     const user = { id, nickname, room }
     users.push(user)
-    return {user}
+    return { user }
 }
 
-addUser({
-    id: 0703,
-    nickname: 'Erudite',
-    room: 'Chengramo'
-})
 
-console.log(users)
 //removeUser
+const removeUser = (id) => {
+    const index = users.findIndex((user) => {
+        return user.id === id
+    })
+
+    if (index !== -1) {
+        return users.splice(index, 1)[0]
+    }
+}
 
 //getUser
+const getUser = (id) => {
+    return users.find((user) => {
+        return user.id === id
+    })
+}
+
 
 //getUsersinRoom
+const getUsersinRoom = (room) => {
+    return users.filter((user) => user.room === room )
+}
+
+
+module.exports = {
+    addUser,
+    removeUser,
+    getUser,
+    getUsersinRoom
+}
