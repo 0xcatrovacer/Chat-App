@@ -18,11 +18,6 @@ const publicPath = path.join(__dirname, '../public')
 app.use(express.static(publicPath))
 
 
-
-let welcmsg = 'Welcome to the Chat!'
-// let disconnectmsg = 'A user has left'
-
-
 io.on('connection', (socket) => {
     console.log('New WebSocket connection')
 
@@ -42,13 +37,15 @@ io.on('connection', (socket) => {
 
     socket.on('sendMessage', (message, callback) => {
 
+        const user = getUser(socket.id)
+
         const filter = new Filter()
 
         if (filter.isProfane(message)) {
             return callback('Profanity is not allowed')
         }
 
-        io.emit('message', generateMessage(message))
+        io.to(user.room).emit('message', generateMessage(user.nickname, message))
         callback()
     })
 
@@ -61,7 +58,8 @@ io.on('connection', (socket) => {
     })
 
     socket.on('sendLocation', (location, callback) => {
-        io.emit('locationMessage', generateLocationMessage(`https://google.com/maps?q=${location.latitude},${location.longitude}`))
+        const user = getUser(socket.id)
+        io.to(user.room).emit('locationMessage', generateLocationMessage(user.nickname, `https://google.com/maps?q=${location.latitude},${location.longitude}`))
 
         callback()
     })

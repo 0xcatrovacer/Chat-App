@@ -30,13 +30,15 @@
         </div>
         <script id="messageTemplate" type="text/html">
         <div>
-            <p>{{createdAt}}<span> - </span>{{message}}</p>
+            <p>{{nickname}}<span> - </span>{{createdAt}}</p>
+            <p>{{message}}</p>
         </div>
     </script>
 
         <script id="locationTemplate" type="text/html">
         <div id="locat">
-            <p> {{createdAt}} - <a href="{{location}}" target="_blank">See My Location</a></p>
+            <p> {{nickname}}<span> - </span>{{createdAt}}</p> 
+            <p><a href="{{location}}" target="_blank">See My Location</a></p>
         </div>
     </script>
 
