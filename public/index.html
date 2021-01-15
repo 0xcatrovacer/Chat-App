@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DisChat</title>
-    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+    <link rel="stylesheet" href="/css/mainpage.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
@@ -14,17 +14,24 @@
 
     <div id="main">
         <nav id="navbar">
+            <p id="navhead">DisChat</p>
         </nav>
     </div>
 
-    <div>
-        <div>
-            <h1>Join</h1>
+    <div id="maincontent">
+        <div id="joinForm">
+            <h1 id="Head">JOIN</h1>
             <form action="/chat.html">
-                <label> Nickname </label>
-                <input type="text" name="nickname" placeholder="Nickname" autocomplete="off" required>
-                <label> Room Name </label>
-                <input type="text" name="room" placeholder="Room Name" autocomplete="off" required>
+                <label class="heading" id="nicklabel"> Nickname </label>
+                <br>
+                <input type="text" name="nickname" placeholder="Nickname" autocomplete="off" class="jform" id="nickform"
+                    required>
+                <br>
+                <label class="heading" id="roomlabel"> Room Name </label>
+                <br>
+                <input type="text" name="room" placeholder="Room Name" autocomplete="off" class="jform" id="roomform"
+                    required>
+                <br>
                 <button>Join</button>
             </form>
         </div>

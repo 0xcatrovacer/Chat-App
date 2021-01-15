@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(54, 57, 63);
+    max-width: 100%;
+    text-decoration: none;
+}
+
+#navbar{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(32, 34, 37);
+    
+}
+
+#navhead{
+    font-size: 27px;
+    padding-top: 15px;
+    font-family: 'Baloo Bhai 2', cursive;
+    color: wheat;
+    background-color: rgb(32, 34, 37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 3px 3px black;
+}
+
+#maincontent{
+    width: 100%;
+    height: 484px;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#joinForm{
+    padding: 0px 0px;
+    width: 40%;
+    height: 50%;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    font-size: 20px;
+    text-shadow: 3px 3px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    outline: none;
+    color: wheat;
+}
+
+#Head{
+    font-size: 40px;
+    padding: 20px 0px;
+    margin-bottom: 50px;
+    font-family: 'Baloo Bhai 2', cursive;
+    text-shadow: 4px 4px black;
+}
+
+.heading{
+    padding: 0px 0px;
+    margin: 5px 0px;
+}
+
+.jform{
+    padding: 10px;
+    border: 2px solid wheat;
+    border-radius: 15px;
+}
+
+button {
+    margin-top: 40px;
+    background-color: wheat;
+    padding: 5px 10px;
+    width: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    background: transparent;
+    color: wheat;
+    border: 2px solid wheat;
+}

@@ -18,25 +18,25 @@ const locationTemplate = document.querySelector('#locationTemplate').innerHTML
 const { nickname, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 const autoscroll = () => {
-    //New Message Element
+    // New message element
     const $newMessage = $messages.lastElementChild
 
-    //Hieght of Message
+    // Height of the new message
     const newMessageStyles = getComputedStyle($newMessage)
     const newMessageMargin = parseInt(newMessageStyles.marginBottom)
     const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
 
-    //Visible Height
+    // Visible height
     const visibleHeight = $messages.offsetHeight
 
-    //Height of messages container
+    // Height of messages container
     const containerHeight = $messages.scrollHeight
 
-    //Scroll Length
+    // Scroll Length
     const scrollOffset = $messages.scrollTop + visibleHeight
 
-    if (Math.round(containerHeight - newMessageHeight) <= Math.round(scrollOffset)) {
-        messages.scrollTop = messages.scrollHeight;
+    if(Math.round(containerHeight - newMessageHeight - 1) <= Math.round(scrollOffset)){
+        $messages.scrollTop = $messages.scrollHeight;
     }
 }
 
