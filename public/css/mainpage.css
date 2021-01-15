@@ -91,7 +91,7 @@ input{
 .jform{
     padding: 10px;
     border: 2px solid wheat;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 button {
@@ -103,6 +103,10 @@ button {
     font-weight: bold;
     border: 2px solid black;
     border-radius: 10px;
+    outline: none;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in;
 }
 
 button:hover{

@@ -3,7 +3,7 @@
     padding: 0px;
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(54, 57, 63);
-    color: rgb(209, 199, 174);
+    color: wheat;
     max-width: 100%;
 }
 
@@ -60,7 +60,7 @@
 
 .btn{
     background-color: rgb(32, 34, 37);
-    color: rgb(150, 153, 157);
+    color: wheat;
     border: 2px solid black;
     border-radius: 7px;
     font-weight: bold;
